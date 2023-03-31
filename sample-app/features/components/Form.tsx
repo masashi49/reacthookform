@@ -36,21 +36,37 @@ const Form: FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor=''>
-        <input defaultValue='' {...register('mail', { required: true })} />
+        <input defaultValue='test' {...register('mail', { required: true })} />
       </label>
       {errors.mail && <span>This field is mail</span>}
+
       <label htmlFor=''>
-        <input defaultValue='' {...register('pass', { required: true })} />
+        <input defaultValue='test' {...register('pass', { required: true })} />
       </label>
       {errors.pass && <span>This field is pass</span>}
       <label htmlFor=''>
-        <select {...(register('age'), { required: true })}>
+        <select {...register('hey')}>
           <option value='10~20代'>10~20代</option>
           <option value='30~40代'>30~40代</option>
           <option value='50~'>50~</option>
         </select>
       </label>
-      {errors.age && <span>This field is required</span>}
+
+      <label htmlFor=''>
+        <label htmlFor=''>
+          <input
+            defaultValue='test'
+            {...register('firstName', { required: true, maxLength: 2 })}
+          />
+        </label>
+        {errors.firstName && <span>This field is firstName</span>}
+      </label>
+
+      <label htmlFor=''>
+        {/*文字の長さではなく、値の大きさ*/}
+        <input type='number' {...register('age', { min: 1, max: 5 })} />{' '}
+      </label>
+      {errors.age && <span>This field is number</span>}
 
       <input type='submit' />
     </form>
