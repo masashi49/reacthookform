@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Form from '../features/components/Form'
+import Form2 from '../features/components/Form2'
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,9 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <Form />
+        <br />
+        <br />
+        <Form2 />
       </main>
     </div>
   )

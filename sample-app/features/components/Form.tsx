@@ -64,7 +64,7 @@ const Form: FC = () => {
 
       <label htmlFor=''>
         {/*文字の長さではなく、値の大きさ*/}
-        <input type='number' {...register('age', { min: 1, max: 5 })} />{' '}
+        <input type='number' {...register('age', { min: 1, max: 5 })} />
       </label>
       {errors.age && <span>This field is number</span>}
 
