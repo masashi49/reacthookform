@@ -24,7 +24,7 @@ function Form2() {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<IFormValues>()
+  } = useForm<IFormValues>() // 検査する内容の型を入れる
 
   const onSubmit: SubmitHandler<IFormValues> = (data) => {
     alert(JSON.stringify(data))
@@ -33,9 +33,7 @@ function Form2() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...(register('First Name'), { required: true })} />
         <Input register={register} required labelName='First Name' />
-
         <input type='submit' />
       </form>
     </div>
