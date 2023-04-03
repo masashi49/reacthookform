@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Form from '../features/components/Form'
 import Form2 from '../features/components/Form2'
+import Form3 from '../features/components/Form3'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
         <br />
         <br />
         <Form2 />
+        <br />
+        <br />
+        <Form3 />
       </main>
     </div>
   )
