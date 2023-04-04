@@ -2,6 +2,15 @@
   padding: 0 2rem;
 }
 
+.center {
+  display: flex;
+  /*コレ*/
+  justify-content: center;
+  /*コレ*/
+  align-items: center;
+  height: 100vh;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
